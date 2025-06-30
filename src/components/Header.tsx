@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full bg-gray-100 shadow-md z-50">
-      <nav className="flex items-center justify-between h-16 px-4 md:px-8">
+      <nav className="flex items-center justify-between h-16 px-4 md:px-8 container mx-auto">
         <div className="flex items-center space-x-4">
           <Link href="/" className="flex items-center space-x-2">
             <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 shadow-md">

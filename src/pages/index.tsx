@@ -1,5 +1,6 @@
-import Landing from "./Landing/index";
+import Landing from "./Landing/page";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 // import Doc from "./Doc/doc";
 
 export default function Home() {
@@ -16,7 +17,9 @@ export default function Home() {
         {/* <Doc /> */}
       </div>
 
-      <div>{/* Footer */}</div>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
