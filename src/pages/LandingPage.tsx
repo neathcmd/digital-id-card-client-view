@@ -8,7 +8,8 @@ import {
   CheckCircle,
 } from "lucide-react";
 import IdCardGif from "@/assets/Tokenization_Hero_1.gif";
-import { BaseButton } from "../../components/BaseButton";
+import { BaseButton } from "../components/BaseButton";
+import Link from "next/link";
 
 const animateIdCard = {
   src: IdCardGif,
@@ -138,12 +139,14 @@ const DigitalIDLanding = () => {
                   <ArrowRight className="inline ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </BaseButton>
 
-                <BaseButton
-                  variant="secondary"
-                  className="px-8 py-4 text-lg font-semibold"
-                >
-                  Watch Demo
-                </BaseButton>
+                <Link href="/Demo/page">
+                  <BaseButton
+                    variant="secondary"
+                    className="px-8 py-4 text-lg font-semibold"
+                  >
+                    Watch Demo
+                  </BaseButton>
+                </Link>
               </div>
             </div>
 

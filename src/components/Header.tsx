@@ -8,7 +8,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const NavItems = [
-    { label: "Doc", href: "/Doc/doc" },
+    { label: "Doc", href: "/doc" },
     { label: "Features", href: "/features" },
     { label: "Security", href: "/security" },
     { label: "Pricing", href: "/pricing" },
@@ -20,6 +20,9 @@ const Header = () => {
     alt: "Digital ID Card Logo",
   };
 
+  // const logo =
+  //   "https://img.freepik.com/premium-vector/id-card-icon-vector-template-illustration-logo-design_942802-2904.jpg";
+
   return (
     <header className="fixed top-0 left-0 w-full bg-gray-100 shadow-md z-50">
       <nav className="flex items-center justify-between h-16 px-4 md:px-8 container mx-auto">
@@ -27,6 +30,7 @@ const Header = () => {
           <Link href="/" className="flex items-center space-x-2">
             <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 shadow-md">
               <User className="text-white text-xl" />
+              {/* {logo} */}
             </span>
 
             <span className="text-2xl font-bold text-blue-500">

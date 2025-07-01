@@ -1,9 +1,8 @@
-import MainLanding from "../sections/Landing/page";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-// import Head from "next/head";
+import Demo from "@/pages/demo";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-export default function HomePage() {
+export default function demo() {
   return (
     <div className="w-full min-h-screen bg-gray-300">
       {/* Fixed Header */}
@@ -21,7 +20,7 @@ export default function HomePage() {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head> */}
-        <MainLanding />
+        <Demo />
       </div>
 
       <div>
