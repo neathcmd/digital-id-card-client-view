@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import {
   Shield,
@@ -139,7 +141,7 @@ const DigitalIDLanding = () => {
                   <ArrowRight className="inline ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </BaseButton>
 
-                <Link href="/Demo/page">
+                <Link href="/demo">
                   <BaseButton
                     variant="secondary"
                     className="px-8 py-4 text-lg font-semibold"

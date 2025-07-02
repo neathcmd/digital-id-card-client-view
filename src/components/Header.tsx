@@ -1,8 +1,11 @@
+"use client";
+
 import { useState } from "react";
 import { Menu, X, User } from "lucide-react";
 import "../styles/globals.css";
 import Link from "next/link";
 import { BaseButton } from "./BaseButton";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,8 +23,7 @@ const Header = () => {
     alt: "Digital ID Card Logo",
   };
 
-  // const logo =
-  //   "https://img.freepik.com/premium-vector/id-card-icon-vector-template-illustration-logo-design_942802-2904.jpg";
+  const pathname = usePathname();
 
   return (
     <header className="fixed top-0 left-0 w-full bg-gray-100 shadow-md z-50">
@@ -41,14 +43,24 @@ const Header = () => {
           {/* Desktop Nav */}
           <div className="hidden md:flex space-x-6 ml-8">
             {NavItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
                 href={item.href}
-                className="relative group font-bold text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                className={`relative px-3 py-1 rounded-md font-semibold transition-colors duration-200 group
+                ${
+                  pathname === item.href
+                    ? "text-blue-600"
+                    : "text-gray-600 hover:text-blue-600"
+                }
+              `}
               >
                 {item.label}
-                <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300 group-hover:w-full" />
-              </a>
+                <span
+                  className={`absolute left-1/2 -bottom-1 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300 transform -translate-x-1/2
+                  ${pathname === item.href ? "w-2/3" : "w-0 group-hover:w-2/3"}
+                `}
+                />
+              </Link>
             ))}
           </div>
         </div>
@@ -89,7 +101,7 @@ const Header = () => {
         {/* Nav Items */}
         <div className="flex flex-col items-center justify-center h-full space-y-8 text-xl">
           {NavItems.map((item) => (
-            <a
+            <Link
               key={item.label}
               href={item.href}
               onClick={() => setIsMenuOpen(false)}
@@ -97,11 +109,11 @@ const Header = () => {
             >
               {item.label}
               <span className="absolute left-1/2 -bottom-1 h-0.5 w-0 bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300 transform -translate-x-1/2 group-hover:w-full" />
-            </a>
+            </Link>
           ))}
-          <button className="bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-3 rounded-full text-white font-semibold hover:opacity-90 transition">
+          {/* <button className="bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-3 rounded-full text-white font-semibold hover:opacity-90 transition">
             Get Started
-          </button>
+          </button> */}
         </div>
       </div>
     </header>

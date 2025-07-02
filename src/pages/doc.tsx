@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import Header from "../components/Header";
 import {
@@ -205,21 +207,6 @@ console.log(verification.status); // 'verified' | 'rejected' | 'pending'`;
       <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            {/* <div className="flex items-center space-x-4">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">D</span>
-              </div>
-              <span className="text-xl font-semibold text-gray-900">
-                Digital ID Card
-              </span>
-              <span className="text-gray-400">/</span>
-              <span className="text-gray-600">Documentation</span>
-            </div>
-            <div className="flex items-center space-x-4">
-              <button className="text-gray-500 hover:text-gray-700">
-                <ExternalLink className="w-5 h-5" />
-              </button>
-            </div> */}
             <Header />
           </div>
         </div>
