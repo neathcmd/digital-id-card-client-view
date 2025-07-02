@@ -10,7 +10,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import IdCardGif from "@/assets/Tokenization_Hero_1.gif";
-import { BaseButton } from "../components/BaseButton";
+import { BaseButton } from "../../../components/BaseButton";
 import Link from "next/link";
 
 const animateIdCard = {

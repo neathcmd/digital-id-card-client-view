@@ -1,4 +1,4 @@
-import Demo from "@/pages/demo";
+import Demo from "@/pages/Demo/components/demo";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 

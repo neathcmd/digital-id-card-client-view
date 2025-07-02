@@ -21,7 +21,7 @@ interface Feature {
   color: string;
 }
 
-const FeaturesPage = () => {
+const Features = () => {
   const [activeFeature, setActiveFeature] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -255,4 +255,4 @@ const FeaturesPage = () => {
   );
 };
 
-export default FeaturesPage;
+export default Features;

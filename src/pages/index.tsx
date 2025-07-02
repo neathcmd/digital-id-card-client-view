@@ -1,4 +1,4 @@
-import MainLanding from "../sections/Landing/page";
+import MainLanding from "./Landing";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 // import Head from "next/head";
@@ -30,3 +30,9 @@ export default function HomePage() {
     </div>
   );
 }
+
+// import { redirect } from "next/navigation";
+
+// export default function IndexPage() {
+//   redirect("/landing");
+// }
