@@ -2,10 +2,11 @@ import { ReactNode } from "react";
 import Head from "next/head";
 import Header from "../ui/Header";
 import Footer from "../ui/Footer";
+import DocSideBar from "@/components/ui/Doc-Side-Bar";
 
 interface DocLayoutProps {
   children: ReactNode;
-  sidebar?: ReactNode; // 👈 add sidebar prop
+  sidebar?: ReactNode;
   title?: string;
   description?: string;
   className?: string;
@@ -19,7 +20,6 @@ interface DocLayoutProps {
 
 const DocLayout = ({
   children,
-  sidebar, // 👈 grab sidebar
   title = "Digital ID Card - Next Gen Identity Solutions",
   description = "Secure digital identity verification and management solutions for the modern world",
   className = "",
@@ -28,7 +28,7 @@ const DocLayout = ({
   headerClassName = "",
   footerClassName = "",
   contentClassName = "",
-  backgroundColor = "bg-gray-50",
+  backgroundColor = "bg-white",
 }: DocLayoutProps) => {
   return (
     <>
@@ -47,7 +47,9 @@ const DocLayout = ({
         <meta property="twitter:image" content="/og-image.jpg" />
       </Head>
 
-      <div className={`w-full min-h-screen ${backgroundColor} ${className}`}>
+      <div
+        className={`w-full container mx-auto min-h-screen ${backgroundColor} ${className}`}
+      >
         {/* Header */}
         {showHeader && (
           <div className={`fixed top-0 left-0 w-full z-50 ${headerClassName}`}>
@@ -62,14 +64,17 @@ const DocLayout = ({
           } ${contentClassName}`}
         >
           {/* Sidebar */}
-          {sidebar && (
+          {/* {sidebar && (
             <aside className="w-64 shrink-0 sticky top-16 self-start px-4">
               {sidebar}
             </aside>
-          )}
+          )} */}
+          <aside className="sharink-0 sticky top-16 self-start ">
+            <DocSideBar />
+          </aside>
 
           {/* Page Content */}
-          <div className="flex-1 px-4">{children}</div>
+          <div className="flex-1 p-6">{children}</div>
         </main>
 
         {/* Footer */}
