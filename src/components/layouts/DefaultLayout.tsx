@@ -26,7 +26,7 @@ const DefaultLayout = ({
   headerClassName = "",
   footerClassName = "",
   contentClassName = "",
-  backgroundColor = "bg-white",
+  backgroundColor = "bg-gray-50",
 }: DefaultLayoutProps) => {
   return (
     <>
